@@ -1,0 +1,30 @@
+
+#微服务配置
+spring:
+  application:
+    name: system
+  cloud:
+    nacos:
+      server-addr: 100.75.29.25:8848
+      discovery:
+        namespace: dev
+        group: xuecheng-plus-project
+      config:
+        namespace: dev
+        group: xuecheng-plus-project
+        file-extension: yml
+        shared-configs:
+          - data-id: logging.yaml
+            group: xuecheng-plus-common
+            refresh: true
+
+
+
+
+
+
+
+
+
+
+

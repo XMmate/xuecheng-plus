@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: orders
+  cloud:
+    nacos:
+      server-addr: 100.75.29.25:8848
+      discovery:
+        namespace: dev
+        group: xuecheng-plus-project
+      config:
+        namespace: dev
+        group: xuecheng-plus-project
+        file-extension: yml
+        shared-configs:
+          - data-id: rabbitmq.yaml
+            group: xuecheng-plus-project
+            refresh: true
+
+          - data-id: logging.yaml
+            group: xuecheng-plus-common
+            refresh: true
+
+
+
+
+
+
